@@ -1,0 +1,11 @@
+<!ELEMENT QLKH (donhang)* >
+<!ELEMENT donhang (tenKH, diachi, MHs) >
+<!ATTLIST donhang maKH ID #REQUIRED>
+<!ELEMENT tenKH (#PCDATA) >
+<!ELEMENT diachi (#PCDATA) >
+<!ELEMENT MHs (mathang)* >
+<!ELEMENT mathang (tenMH, SL, dongia) >
+<!ATTLIST mathang maMH ID #REQUIRED >
+<!ELEMENT tenMH (#PCDATA) >
+<!ELEMENT SL (#PCDATA) >
+<!ELEMENT dongia (#PCDATA) >

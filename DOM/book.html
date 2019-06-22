@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xmlhttp.open("GET", "Nha_Sach.xml" , true);
+            xmlhttp.send();
+
+            function myFunction(xml) {
+                var id, title, author, price, i, txt, xmlDoc;
+                xmlDoc = xml.responseXML;
+                txt = "";
+                id = xmlDoc.getAttribute("ID");
+                title = xmlDoc.getElementsByTagName("title");
+                author = xmlDoc.getElementsByTagName("author");
+                price = xmlDoc.getElementsByTagName("price");
+                txt += "<table border=1>";
+                txt += "<tr><td>Mã sách</td><td>Tên sách</td><td>Tác giả</td><td>Đơn giá</td></tr>"
+                for (i = 0; i < title.length; i++){
+                
+                    txt += "<tr>";
+                    txt += "<td>" + id[i].childNodes[0].nodeValue + "</td>";
+                    txt += "<td>" + title[i].childNodes[0].nodeValue + "</td>";
+                    txt += "<td>" + author[i].childNodes[0].nodeValue + "</td>";
+                    txt += "<td>" + price[i].childNodes[0].nodeValue + "</td>";
+                    txt += "</tr>";
+                }
+                txt += "</table>"
+                document.getElementById("demo").innerHTML = txt; 
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" vc:minVersion="1.1" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
+
+    <xs:element name="QLSach">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="KhachHang" maxOccurs="unbounded" minOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaKH">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="KH[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="HoDemKH" type="xs:string"/>
+                            <xs:element name="TenKH" type="xs:string"/>
+                            <xs:element name="NgaySinh" type="xs:date"/>
+                            <xs:element name="DiaChi" type="xs:string"/>
+                            <xs:element name="DienThoai" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LoaiSach" maxOccurs="unbounded" minOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaLoai">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="L[0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="TenLoai" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Sach" maxOccurs="unbounded" minOccurs="5" nillable="false">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaSach">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="S[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="TenSach" type="xs:string"/>
+                            <xs:element name="MaLoai">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="L[0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="GiaThue">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ThueSach" maxOccurs="unbounded" minOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="NgayThue" type="xs:date"/>
+                            <xs:element name="MaSach">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="S[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="MaKH">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="KH[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="NgayTra" type="xs:date"/>
+                        </xs:sequence>
+                        <xs:assert test="NgayTra >= NgayThue"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="keyKhachHang">
+            <xs:selector xpath="KhachHang"/>
+            <xs:field xpath="MaKH"/>
+        </xs:key>
+        <xs:key name="keyLoaiSach">
+            <xs:selector xpath="LoaiSach"/>
+            <xs:field xpath="MaLoai"/>
+        </xs:key>
+        <xs:key name="keySach">
+            <xs:selector xpath="Sach"/>
+            <xs:field xpath="MaSach"/>
+        </xs:key>
+        <xs:key name="keyThueSach">
+            <xs:selector xpath="ThueSach"/>
+            <xs:field xpath="NgayThue"/>
+            <xs:field xpath="MaSach"/>
+            <xs:field xpath="MaKH"/>
+        </xs:key>
+        <xs:keyref name="KhachHang-ThueSach" refer="keyKhachHang">
+            <xs:selector xpath="ThueSach"/>
+            <xs:field xpath="MaKH"/>
+        </xs:keyref>
+        <xs:keyref name="Sach-ThueSach" refer="keySach">
+            <xs:selector xpath="ThueSach"/>
+            <xs:field xpath="MaSach"/>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

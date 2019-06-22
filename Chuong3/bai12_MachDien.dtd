@@ -1,0 +1,4 @@
+<!ELEMENT bangmachdien (machdien)* >
+<!ELEMENT machdien (tenmachdien, giatridientro*) >
+<!ELEMENT tenmachdien (#PCDATA) >
+<!ELEMENT giatridientro (#PCDATA) >

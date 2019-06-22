@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+
+    <xs:element name="QuanLyDatPhong">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Phong" maxOccurs="unbounded" minOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaPhong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:pattern value="[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Tang">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:pattern value="[0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="GiaNiemYet" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KhachHang" maxOccurs="unbounded" minOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaKH">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="KH[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="HoKH" type="xs:string"/>
+                            <xs:element name="TenKH" type="xs:string"/>
+                            <xs:element name="DiaChi" type="xs:string"/>
+                            <xs:element name="SDT" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PhieuDatPhong" maxOccurs="unbounded" minOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaPhieu">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="PHIEU[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="MaKH">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="KH[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="NgayDatPhong" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ChiTietPhieu" maxOccurs="unbounded" minOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MaPhieu">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="PHIEU[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="MaPhong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:pattern value="[0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ThoiGianO">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="NgayDen" type="xs:date"/>
+                                        <xs:element name="NgayDi" type="xs:date"/>
+
+                                    </xs:sequence>
+                                    <xs:assert test="NgayDi ge NgayDen"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="DonGIa" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="KeyPhong">
+            <xs:selector xpath="Phong"/>
+            <xs:field xpath="MaPhong"/>
+        </xs:key>
+        <xs:key name="KeyKhachHang">
+            <xs:selector xpath="KhachHang"/>
+            <xs:field xpath="MaKH"/>
+        </xs:key>
+        <xs:key name="KeyPhieuDatPhong">
+            <xs:selector xpath="PhieuDatPhong"/>
+            <xs:field xpath="MaPhieu"/>
+        </xs:key>
+        <xs:key name="KeyCTPhieu">
+            <xs:selector xpath="ChiTietPhieu"/>
+            <xs:field xpath="MaPhieu"/>
+            <xs:field xpath="MaPhong"/>
+        </xs:key>
+        <xs:keyref name="Phong-CTPhieu" refer="KeyPhong">
+            <xs:selector xpath="ChiTietPhieu"/>
+            <xs:field xpath="MaPhong"/>
+        </xs:keyref>
+        <xs:keyref name="Phieu-CTPhieu" refer="KeyPhieuDatPhong">
+            <xs:selector xpath="ChiTietPhieu"/>
+            <xs:field xpath="MaPhieu"/>
+        </xs:keyref>
+        <xs:keyref name="KH-DP" refer="KeyKhachHang">
+            <xs:selector xpath="PhieuDatPhong"/>
+            <xs:field xpath="MaKH"/>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

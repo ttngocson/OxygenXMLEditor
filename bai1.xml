@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orderdetail SYSTEM "bai4_OrderDetail.dtd">
+<orderdetail>
+    <orderdate>2006-6-6</orderdate>
+    <customer>Peter Collingwood</customer>
+    <item>
+        <productID>3</productID>
+        <quantity>3</quantity>
+    </item>
+    <item>
+        <productID>1</productID>
+        <quantity>5</quantity>
+    </item>
+</orderdetail>

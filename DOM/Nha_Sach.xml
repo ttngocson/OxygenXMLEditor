@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--đặc tả cấu trúc-->
+<!--đặc tả nội dung-->
+<PN name="Nhà sách Phương Nam" year="2013">
+    <book ID="01">
+        <title>Java toàn tập</title>
+        <author>Nguyễn Phương Lan</author>
+        <price>236</price>
+    </book>
+    <book ID="02">
+        <title>Lập trình trực quan với C#</title>
+        <author>Trần Thị Mỹ Lệ</author>
+        <price>369</price>
+    </book>
+    <book ID="03">
+        <title>Đất nước đứng lên</title>
+        <author>Nguyên Ngọc</author>
+        <price>100</price>
+    </book>
+    <book ID="04">
+        <title>Rừng Na uy</title>
+        <author>M.Haruki</author>
+        <price>100</price>
+    </book>
+    <book ID="05">
+        <title>Kinh tế học</title>
+        <author>Ngô Đình Thưởng</author>
+        <price>610</price>
+    </book>
+    <book ID="06">
+        <title>Bí quyết làm giàu </title>
+        <author>Nguyễn Thị Ngọc Trang</author>
+        <price>987</price>
+    </book>
+</PN>

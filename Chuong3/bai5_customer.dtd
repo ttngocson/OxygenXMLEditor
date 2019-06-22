@@ -1,0 +1,5 @@
+<!ELEMENT document (customer)+ >
+<!ELEMENT customer (firstname, middleintial?, lastname) >
+<!ELEMENT firstname (#PCDATA) >
+<!ELEMENT middleintial (#PCDATA) >
+<!ELEMENT lastname (#PCDATA) >

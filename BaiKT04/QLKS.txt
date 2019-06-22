@@ -1,0 +1,13 @@
+﻿for $x in doc("QLKS.xml")/QuanLyDatPhong/KhachHang
+for $y in doc("QLKS.xml")/QuanLyDatPhong/PhieuDatPhong
+for $z in doc("QLKS.xml")/QuanLyDatPhong/ChiTietPhieu
+where $x/TenKH='Nam' and $x/MaKH=$y/MaKH and $y/MaPhieu=$z/MaPhieu and $y[contains(normalize-space(),'2012')]
+return <text>{"Họ tên: "}{data($x/HoKH)} {" "} {data($x/TenKH)} {". Ngày đặt phòng: "}{data($y/NgayDatPhong)} </text>
+//-------------------------------------------------
+for $x in doc("QLKS.xml")/QuanLyDatPhong/KhachHang
+for $y in doc("QLKS.xml")/QuanLyDatPhong/PhieuDatPhong
+for $z in doc("QLKS.xml")/QuanLyDatPhong/ChiTietPhieu
+where  $x/MaKH=$y/MaKH and $y/MaPhieu=$z/MaPhieu
+and $z/ThoiGianO/NgayDen lt $z/ThoiGianO/NgayDi and $z/ThoiGianO/NgayDen lt '2012-02-21' and $z/ThoiGianO/NgayDi ge '2012-02-21'
+return <text>{"Họ tên: "}{data($x/HoKH)} {" "} {data($x/TenKH)} {". Mã phòng: "}{data($z/MaPhong)}</text>
+//-------------------------------------------------

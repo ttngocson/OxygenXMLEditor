@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
+<catalog>
+    <cd cd_id="01">
+        <title>Empire Burlesque</title>
+    </cd>
+    <cd cd_id="02">
+        <title>Hide your heart</title>
+    </cd>
+</catalog>

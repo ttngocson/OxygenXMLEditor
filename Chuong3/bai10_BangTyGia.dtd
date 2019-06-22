@@ -1,0 +1,7 @@
+<!ELEMENT document (bangtygia)* >
+<!ELEMENT bangtygia (tenngoaite, kyhieu, ((muatienmat | muachuyenkhoan) | ban)) >
+<!ELEMENT tenngoaite (#PCDATA) >
+<!ELEMENT kyhieu (#PCDATA) >
+<!ELEMENT muatienmat (#PCDATA) >
+<!ELEMENT muachuyenkhoan (#PCDATA) >
+<!ELEMENT ban (#PCDATA) >

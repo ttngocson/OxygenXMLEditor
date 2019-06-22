@@ -1,0 +1,7 @@
+<!ELEMENT document (KQXS) >
+<!ELEMENT KQXS (ngayxoso, loaigiai+) >
+<!ELEMENT ngayxoso (#PCDATA) >
+<!ELEMENT loaigiai (tengiai, sogiatri, tienthuong)+ >
+<!ELEMENT tengiai (#PCDATA) >
+<!ELEMENT sogiatri (#PCDATA) >
+<!ELEMENT tienthuong (#PCDATA) >

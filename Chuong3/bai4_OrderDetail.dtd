@@ -1,0 +1,6 @@
+<!ELEMENT orderdetail (orderdate, customer, item+) >
+<!ELEMENT orderdate (#PCDATA) >
+<!ELEMENT customer (#PCDATA) >
+<!ELEMENT item (productID, quantity) >
+<!ELEMENT productID (#PCDATA) >
+<!ELEMENT quantity (#PCDATA) >

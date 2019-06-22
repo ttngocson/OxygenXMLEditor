@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="QLSach.xsl"?>
+<QLSach xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="QLSach.xsd">
+    <KhachHang>
+        <MaKH>KH001</MaKH>
+        <HoDemKH>Khương </HoDemKH>
+        <TenKH>Vy</TenKH>
+        <NgaySinh>1981-05-04</NgaySinh>
+        <DiaChi>Ninh Hòa</DiaChi>
+        <DienThoai>0123456</DienThoai>
+    </KhachHang>
+    <KhachHang>
+        <MaKH>KH002</MaKH>
+        <HoDemKH>Nguyễn </HoDemKH>
+        <TenKH>Hiếu</TenKH>
+        <NgaySinh>1980-05-04</NgaySinh>
+        <DiaChi>Ninh Hòa</DiaChi>
+        <DienThoai>0123456</DienThoai>
+    </KhachHang>
+    <KhachHang>
+        <MaKH>KH003</MaKH>
+        <HoDemKH>Nguyễn </HoDemKH>
+        <TenKH>Đạt</TenKH>
+        <NgaySinh>1979-05-04</NgaySinh>
+        <DiaChi>Ninh Hòa</DiaChi>
+        <DienThoai>0123456</DienThoai>
+    </KhachHang>
+    <KhachHang>
+        <MaKH>KH004</MaKH>
+        <HoDemKH>Trần </HoDemKH>
+        <TenKH>Sơn</TenKH>
+        <NgaySinh>1979-05-04</NgaySinh>
+        <DiaChi>Dak Lak</DiaChi>
+        <DienThoai>0123456</DienThoai>
+    </KhachHang>
+    <KhachHang>
+        <MaKH>KH005</MaKH>
+        <HoDemKH>Nguyễn </HoDemKH>
+        <TenKH>Quang</TenKH>
+        <NgaySinh>1982-05-04</NgaySinh>
+        <DiaChi>Nha Trang</DiaChi>
+        <DienThoai>0123456</DienThoai>
+    </KhachHang>
+    <LoaiSach>
+        <MaLoai>L01</MaLoai>
+        <TenLoai>Sách thiếu nhi</TenLoai>
+    </LoaiSach>
+    <LoaiSach>
+        <MaLoai>L02</MaLoai>
+        <TenLoai>Sách nội trợ</TenLoai>
+    </LoaiSach>
+    <LoaiSach>
+        <MaLoai>L03</MaLoai>
+        <TenLoai>Sách tài liệu</TenLoai>
+    </LoaiSach>
+    <LoaiSach>
+        <MaLoai>L04</MaLoai>
+        <TenLoai>Sách khoa học</TenLoai>
+    </LoaiSach>
+    <LoaiSach>
+        <MaLoai>L05</MaLoai>
+        <TenLoai>Sách tham khảo</TenLoai>
+    </LoaiSach>
+    <Sach>
+        <MaSach>S001</MaSach>
+        <TenSach>Đôrêmon</TenSach>
+        <MaLoai>L01</MaLoai>
+        <GiaThue>500</GiaThue>
+    </Sach>
+    <Sach>
+        <MaSach>S002</MaSach>
+        <TenSach>Các món ăn Việt Nam</TenSach>
+        <MaLoai>L02</MaLoai>
+        <GiaThue>1000</GiaThue>
+    </Sach>
+    <Sach>
+        <MaSach>S003</MaSach>
+        <TenSach>Chiến thắng Điện Biên Phủ</TenSach>
+        <MaLoai>L03</MaLoai>
+        <GiaThue>1500</GiaThue>
+    </Sach>
+    <Sach>
+        <MaSach>S004</MaSach>
+        <TenSach>Khám phá ngân hà</TenSach>
+        <MaLoai>L04</MaLoai>
+        <GiaThue>2000</GiaThue>
+    </Sach>
+    <Sach>
+        <MaSach>S005</MaSach>
+        <TenSach>Sách giải toán</TenSach>
+        <MaLoai>L05</MaLoai>
+        <GiaThue>2500</GiaThue>
+    </Sach>
+    <ThueSach>
+        <NgayThue>2019-05-04</NgayThue>
+        <MaSach>S003</MaSach>
+        <MaKH>KH003</MaKH>
+        <NgayTra>2019-05-09</NgayTra>
+    </ThueSach>
+    <ThueSach>
+        <NgayThue>2019-05-03</NgayThue>
+        <MaSach>S002</MaSach>
+        <MaKH>KH001</MaKH>
+        <NgayTra>2019-05-06</NgayTra>
+    </ThueSach>
+    <ThueSach>
+        <NgayThue>2019-05-04</NgayThue>
+        <MaSach>S003</MaSach>
+        <MaKH>KH001</MaKH>
+        <NgayTra>2019-05-08</NgayTra>
+    </ThueSach>
+    <ThueSach>
+        <NgayThue>2019-05-04</NgayThue>
+        <MaSach>S002</MaSach>
+        <MaKH>KH002</MaKH>
+        <NgayTra>2019-05-10</NgayTra>
+    </ThueSach>
+    <ThueSach>
+        <NgayThue>2019-05-04</NgayThue>
+        <MaSach>S004</MaSach>
+        <MaKH>KH002</MaKH>
+        <NgayTra>2019-05-07</NgayTra>
+    </ThueSach>
+</QLSach>

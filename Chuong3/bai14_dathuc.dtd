@@ -1,0 +1,7 @@
+<!ELEMENT dathuc (x5?, x4?, x3?, x2?, x1?, c?) >
+<!ELEMENT x5 (#PCDATA) >
+<!ELEMENT x4 (#PCDATA) >
+<!ELEMENT x3 (#PCDATA) >
+<!ELEMENT x2 (#PCDATA) >
+<!ELEMENT x1 (#PCDATA) >
+<!ELEMENT c (#PCDATA) >

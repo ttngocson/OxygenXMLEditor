@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lophoc.xsl"?>
+<dslop>
+    <lophoc>
+        <malop>CNTT16</malop>
+        <tenlop>Công nghệ thông tin 2017</tenlop>
+    </lophoc>
+    <lophoc>
+        <malop>TCKT17</malop>
+        <tenlop>Tài chính kế toán 2017</tenlop>
+    </lophoc>
+    <lophoc>
+        <malop>TKDH15</malop>
+        <tenlop>Thiết kế đồ họa</tenlop>
+    </lophoc>
+</dslop>

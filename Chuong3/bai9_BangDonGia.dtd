@@ -1,0 +1,6 @@
+<!ELEMENT document (khachsan)+ >
+<!ELEMENT khachsan (tenKS, diachi, (loaiphong, dongia)+) >
+<!ELEMENT tenKS (#PCDATA) >
+<!ELEMENT diachi (#PCDATA) >
+<!ELEMENT loaiphong (#PCDATA) >
+<!ELEMENT dongia (#PCDATA) >

@@ -1,0 +1,12 @@
+<!ELEMENT kho (linhvuc)* >
+<!ELEMENT linhvuc (tenLV, sachs) >
+<!ELEMENT tenLV (#PCDATA) >
+<!ELEMENT sachs (sach)* >
+<!ELEMENT sach (tuade, tacgias) >
+<!ELEMENT tuade (#PCDATA) >
+<!ELEMENT tacgias (tacgia)+  >
+<!ELEMENT tacgia (maTG, tenTG, diachi?,SDT?) >
+<!ELEMENT maTC (#PCDATA) >
+<!ELEMENT tenTG (#PCDATA) >
+<!ELEMENT diachi (#PCDATA) >
+<!ELEMENT SDT (#PCDATA) >

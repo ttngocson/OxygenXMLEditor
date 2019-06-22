@@ -1,0 +1,10 @@
+<!ELEMENT document (order) >
+<!ELEMENT order (orderday, customer, (productID, quantity)+, catalog) >
+<!ELEMENT orderday (#PCDATA) >
+<!ELEMENT customer (#PCDATA) >
+<!ELEMENT productID (#PCDATA) >
+<!ELEMENT quantity (#PCDATA) >
+<!ELEMENT catalog (catagoryname, cproductID, productname)+ >
+<!ELEMENT catagoryname (#PCDATA) >
+<!ELEMENT cproductID (#PCDATA) >
+<!ELEMENT productname (#PCDATA) >

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="SPECIALS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TITLE"/>
+        <xs:element ref="MESSAGE"/>
+        <xs:element ref="CD"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TITLE" type="xs:string"/>
+  <xs:element name="MESSAGE" type="xs:NCName"/>
+  <xs:element name="CD">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ARTIST"/>
+        <xs:element ref="PRICEUS"/>
+        <xs:element ref="PRICEVN"/>
+        <xs:element ref="TRACK"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ARTIST" type="xs:NCName"/>
+  <xs:element name="PRICEUS" type="xs:string"/>
+  <xs:element name="PRICEVN" type="xs:NMTOKEN"/>
+  <xs:element name="TRACK">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="LENGTH"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LENGTH" type="xs:NMTOKEN"/>
+</xs:schema>

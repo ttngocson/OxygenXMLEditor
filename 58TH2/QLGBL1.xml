@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="QLGBL.xsl"?>
+<DT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="QLGBL.xsd">
+    <DSDT>
+        <DoiTuyen>
+            <MaDoiTuyen>D01</MaDoiTuyen>
+            <TenDoiTuyen>Khánh Hòa</TenDoiTuyen>
+        </DoiTuyen>
+        <DoiTuyen>
+            <MaDoiTuyen>D02</MaDoiTuyen>
+            <TenDoiTuyen>Bình Định</TenDoiTuyen>
+        </DoiTuyen>
+        <DoiTuyen>
+            <MaDoiTuyen>D03</MaDoiTuyen>
+            <TenDoiTuyen>An Giang</TenDoiTuyen>
+        </DoiTuyen>
+        <DoiTuyen>
+            <MaDoiTuyen>D04</MaDoiTuyen>
+            <TenDoiTuyen>Đà Nẵng</TenDoiTuyen>
+        </DoiTuyen>
+        <DoiTuyen>
+            <MaDoiTuyen>D05</MaDoiTuyen>
+            <TenDoiTuyen>Hà Nội</TenDoiTuyen>
+        </DoiTuyen>
+        <VanDongVien>
+            <MaVDV>K001</MaVDV>
+            <HoVDV>Đỗ</HoVDV>
+            <TenVDV>Huy</TenVDV>
+            <GioiTinh>Nam</GioiTinh>
+            <MaDoiTuyen>D01</MaDoiTuyen>
+        </VanDongVien>
+        <VanDongVien>
+            <MaVDV>K002</MaVDV>
+            <HoVDV>Nguyễn</HoVDV>
+            <TenVDV>Thuận</TenVDV>
+            <GioiTinh>Nam</GioiTinh>
+            <MaDoiTuyen>D02</MaDoiTuyen>
+        </VanDongVien>
+        <VanDongVien>
+            <MaVDV>K003</MaVDV>
+            <HoVDV>Trần</HoVDV>
+            <TenVDV>Mai</TenVDV>
+            <GioiTinh>Nữ</GioiTinh>
+            <MaDoiTuyen>D03</MaDoiTuyen>
+        </VanDongVien>
+        <VanDongVien>
+            <MaVDV>K004</MaVDV>
+            <HoVDV>Bích</HoVDV>
+            <TenVDV>Thu</TenVDV>
+            <GioiTinh>Nữ</GioiTinh>
+            <MaDoiTuyen>D04</MaDoiTuyen>
+        </VanDongVien>
+        <VanDongVien>
+            <MaVDV>K005</MaVDV>
+            <HoVDV>Văn</HoVDV>
+            <TenVDV>Quyến</TenVDV>
+            <GioiTinh>Nam</GioiTinh>
+            <MaDoiTuyen>D05</MaDoiTuyen>
+        </VanDongVien>
+        <NoiDungThi>
+            <MaNoiDung>BTD100</MaNoiDung>
+            <TenNoiDung>Bơi tự do 100m</TenNoiDung>
+            <KyLucQGCu>44</KyLucQGCu>
+        </NoiDungThi>
+        <NoiDungThi>
+            <MaNoiDung>BN200</MaNoiDung>
+            <TenNoiDung>Bơi ngữa 200m</TenNoiDung>
+            <KyLucQGCu>80</KyLucQGCu>
+        </NoiDungThi>
+        <NoiDungThi>
+            <MaNoiDung>BB300</MaNoiDung>
+            <TenNoiDung>Bơi Bướm 300m</TenNoiDung>
+            <KyLucQGCu>60</KyLucQGCu>
+        </NoiDungThi>
+        <NoiDungThi>
+            <MaNoiDung>BTS400m</MaNoiDung>
+            <TenNoiDung>Bơi trường sấp 400m</TenNoiDung>
+            <KyLucQGCu>30</KyLucQGCu>
+        </NoiDungThi>
+        <NoiDungThi>
+            <MaNoiDung>BE500</MaNoiDung>
+            <TenNoiDung>Bơi ếch 500m</TenNoiDung>
+            <KyLucQGCu>40</KyLucQGCu>
+        </NoiDungThi>
+        <GiaiThuong>
+            <MaVDV>K001</MaVDV>
+            <MaNoiDung>BE500</MaNoiDung>
+            <ThanhTich>39</ThanhTich>
+            <MaHuyChuong>V</MaHuyChuong>
+        </GiaiThuong>
+        <GiaiThuong>
+            <MaVDV>K002</MaVDV>
+            <MaNoiDung>BTD100</MaNoiDung>
+            <ThanhTich>10</ThanhTich>
+            <MaHuyChuong>V</MaHuyChuong>
+        </GiaiThuong>
+        <GiaiThuong>
+            <MaVDV>K003</MaVDV>
+            <MaNoiDung>BTS400</MaNoiDung>
+            <ThanhTich>30</ThanhTich>
+            <MaHuyChuong>Đ</MaHuyChuong>
+        </GiaiThuong>
+        <GiaiThuong>
+            <MaVDV>K004</MaVDV>
+            <MaNoiDung>BN200</MaNoiDung>
+            <ThanhTich>15</ThanhTich>
+            <MaHuyChuong>Đ</MaHuyChuong>
+        </GiaiThuong>
+        <GiaiThuong>
+            <MaVDV>K001</MaVDV>
+            <MaNoiDung>BB300</MaNoiDung>
+            <ThanhTich>60</ThanhTich>
+            <MaHuyChuong>V</MaHuyChuong>
+        </GiaiThuong>
+        <HuyChuong>
+            <MaHuyChuong>KC</MaHuyChuong>
+            <TenHuyChuong>Kim Cương</TenHuyChuong>
+            <TienThuong>7000000</TienThuong>
+        </HuyChuong>
+        <HuyChuong>
+            <MaHuyChuong>BK</MaHuyChuong>
+            <TenHuyChuong>Bạch KIm</TenHuyChuong>
+            <TienThuong>6000000</TienThuong>
+        </HuyChuong>
+        <HuyChuong>
+            <MaHuyChuong>V</MaHuyChuong>
+            <TenHuyChuong>Vàng</TenHuyChuong>
+            <TienThuong>5000000</TienThuong>
+        </HuyChuong>
+        <HuyChuong>
+            <MaHuyChuong>B</MaHuyChuong>
+            <TenHuyChuong>Bạc</TenHuyChuong>
+            <TienThuong>4000000</TienThuong>
+        </HuyChuong>
+        <HuyChuong>
+            <MaHuyChuong>Đ</MaHuyChuong>
+            <TenHuyChuong>Đồng</TenHuyChuong>
+            <TienThuong>3000000</TienThuong>
+        </HuyChuong>
+    </DSDT>
+</DT>

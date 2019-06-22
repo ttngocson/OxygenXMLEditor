@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order>
+    <OrderDay>2006-6-6</OrderDay>
+    <Customer>Helen Mooney</Customer>
+    <ProductID>2</ProductID>
+    <Quantity>2</Quantity>
+    <ProductID>4</ProductID>
+    <Quantity>3</Quantity>
+    <Catalog>
+        <CatagoryName>Beverages</CatagoryName>
+    </Catalog>
+</Order>

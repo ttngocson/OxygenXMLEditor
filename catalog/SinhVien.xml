@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="SinhVien.xsl"?>
+<QLSINHVIEN xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="SinhVien.xsd">
+    <SINHVIEN>
+        <MASV>SV01</MASV>
+        <TENSV>PHAN TUẤN CƯỜNG</TENSV>
+        <GIOITINH>NAM</GIOITINH>
+        <NGAYSINH>03/03/1993</NGAYSINH>
+        <MALOP>CNTT16</MALOP>
+    </SINHVIEN>
+    <SINHVIEN>
+        <MASV>SV02</MASV>
+        <TENSV>HUỲNH CHÍ TÂM</TENSV>
+        <GIOITINH>NAM</GIOITINH>
+        <NGAYSINH>08/03/1993</NGAYSINH>
+        <MALOP>CNTT16</MALOP>
+    </SINHVIEN>
+    <SINHVIEN>
+        <MASV>SV03</MASV>
+        <TENSV>VƯƠNG CHÍ DŨNG</TENSV>
+        <GIOITINH>NAM</GIOITINH>
+        <NGAYSINH>14/04/1991</NGAYSINH>
+        <MALOP>CNTT16</MALOP>
+    </SINHVIEN>
+    <SINHVIEN>
+        <MASV>SV04</MASV>
+        <TENSV>PHẠM ĐỨC NGUYÊN</TENSV>
+        <GIOITINH>NAM</GIOITINH>
+        <NGAYSINH>27/07/1993</NGAYSINH>
+        <MALOP>TCKT15</MALOP>
+    </SINHVIEN>
+    <SINHVIEN>
+        <MASV>SV05</MASV>
+        <TENSV>TRƯƠNG MỸ YẾN NHI</TENSV>
+        <GIOITINH>NỮ</GIOITINH>
+        <NGAYSINH>03/10/1993</NGAYSINH>
+        <MALOP>TCKT15</MALOP>
+    </SINHVIEN>
+</QLSINHVIEN>

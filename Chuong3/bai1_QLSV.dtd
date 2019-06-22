@@ -1,0 +1,10 @@
+<!ELEMENT document (sinhvien)* >
+<!ELEMENT sinhvien (hoten, lop ,monhoc*) >
+<!ATTLIST sinhvien mssv ID #REQUIRED >
+<!ELEMENT hoten (#PCDATA) >
+<!ELEMENT lop (#PCDATA) >
+<!ELEMENT monhoc (maMH, tenMH, soTC, KQ) >
+<!ELEMENT maMH (#PCDATA) >
+<!ELEMENT temMH (#PCDATA) >
+<!ELEMENT soTC (#PCDATA) >
+<!ELEMENT KQ (#PCDATA) >

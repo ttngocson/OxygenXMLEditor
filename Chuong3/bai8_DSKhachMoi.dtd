@@ -1,0 +1,6 @@
+<!ELEMENT document (dskhachmoi) >
+<!ELEMENT dskhachmoi (khachmoi)* >
+<!ELEMENT khachmoi (ho, ten, cachxungho) >
+<!ELEMENT ho (#PCDATA) >
+<!ELEMENT ten (#PCDATA) >
+<!ELEMENT cachxungho (#PCDATA) >

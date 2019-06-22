@@ -1,0 +1,7 @@
+<!ELEMENT document (dathang) >
+<!ELEMENT dathang (ngaydat, khachhang, sanpham+) >
+<!ELEMENT ngaydat (#PCDATA) >
+<!ELEMENT khachhang (#PCDATA) >
+<!ELEMENT sanpham (maso, soluong) >
+<!ELEMENT maso (#PCDATA) >
+<!ELEMENT soluong (#PCDATA) >

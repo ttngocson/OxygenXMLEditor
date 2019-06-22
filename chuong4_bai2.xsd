@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="DONHANG">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="KHACHHANG" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MAKH">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[a-zA-Z][a-zA-Z][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="TENKH" type="xs:string"/>
+                            <xs:element name="DIACHI">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{2}[a-zA-Z]+"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="DSMATHANG" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="MAMH">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                  <xs:pattern value="[a-zA-Z][a-zA-Z][0-9][0-9]"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="TENMH" type="xs:string"/>
+                                        <xs:element name="SOLUONG" type="xs:unsignedInt"/>
+                                        <xs:element name="DONGIA" type="xs:unsignedInt"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="PKKHACHHANG">
+            <xs:selector xpath="KHACHHANG"/>
+            <xs:field xpath="MAKH"/>
+        </xs:key>
+        <xs:key name="PKMATHANG">
+            <xs:selector xpath="DSMATHANG"/>
+            <xs:field xpath="MAMH"/>
+        </xs:key>
+    </xs:element>
+</xs:schema>

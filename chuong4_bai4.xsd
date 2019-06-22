@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="MATRAN">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="3" minOccurs="3" name="HANG">
+                    <xs:comxplexType>
+                        <xs:sequence>
+                            <xs:element name="COT" maxOccurs="3" minOccurs="3">
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="ID" use="required" type="xs:ID">
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ID" use="required" type="xs:ID"> </xs:attribute>
+                    </xs:comxplexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

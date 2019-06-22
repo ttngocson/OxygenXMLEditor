@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SPECIALS SYSTEM "QLDia.dtd">
+<SPECIALS>
+    <TITLE>JACKIE MEMORY</TITLE>
+    <MESSAGE>MEMORY</MESSAGE>
+    <CD>ALBUM VOL 1
+        <ARTIST>JACKIE</ARTIST>
+        <PRICEUS>1</PRICEUS>
+        <PRICEVN>20000</PRICEVN>
+        <TRACK>TENBAIHAT1
+            <LENGTH>5:30</LENGTH>
+        </TRACK>
+        <TRACK>TENBAIHAT2
+            <LENGTH>4:30</LENGTH>
+        </TRACK>
+        <TRACK>TENBAIHAT3
+            <LENGTH>3:30</LENGTH>
+        </TRACK>
+        <TRACK>TENBAIHAT4
+            <LENGTH>2:30</LENGTH>
+        </TRACK>
+        <TRACK>TENBAIHAT5
+            <LENGTH>5:15</LENGTH>
+        </TRACK>
+    </CD>
+</SPECIALS>

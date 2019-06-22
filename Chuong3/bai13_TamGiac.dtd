@@ -1,0 +1,4 @@
+<!ELEMENT tamgiac (diemA, diemB, diemC) >
+<!ELEMENT diemA (#PCDATA) >
+<!ELEMENT diemB (#PCDATA) >
+<!ELEMENT diemC (#PCDATA) >

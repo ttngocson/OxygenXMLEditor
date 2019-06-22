@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="DT">
+        <xs:complexType>
+            <xs:sequence maxOccurs="1">
+                <xs:element name="DSDT">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="unbounded">
+                            <xs:element name="DoiTuyen" maxOccurs="unbounded" minOccurs="5">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="MaDoiTuyen">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="D0[0-9]"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="TenDoiTuyen" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="VanDongVien" maxOccurs="unbounded" minOccurs="5">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="MaVDV">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="K00[0-9]"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="HoVDV" type="xs:string"/>
+                                        <xs:element name="TenVDV" type="xs:string"/>
+                                        <xs:element name="GioiTinh">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="Nam|Nữ"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="MaDoiTuyen">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="D0[0-9]"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="NoiDungThi" maxOccurs="unbounded" minOccurs="5">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="MaNoiDung" type="xs:string"/>
+                                        <xs:element name="TenNoiDung" type="xs:string"/>
+                                        <xs:element name="KyLucQGCu" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GiaiThuong" maxOccurs="unbounded" minOccurs="5">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="MaVDV" type="xs:string"/>
+                                        <xs:element name="MaNoiDung" type="xs:string"/>
+                                        <xs:element name="ThanhTich" type="xs:integer"/>
+                                        <xs:element name="MaHuyChuong" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="HuyChuong" maxOccurs="unbounded" minOccurs="5">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="MaHuyChuong" type="xs:string"/>
+                                        <xs:element name="TenHuyChuong" type="xs:string"/>
+                                        <xs:element name="TienThuong" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="keyDoiTuyen">
+            <xs:selector xpath="DoiTuyen"/>
+            <xs:field xpath="MaDoiTuyen"/>
+        </xs:key>
+        <xs:key name="keyVanDongVien">
+            <xs:selector xpath="VanDongVien"/>
+            <xs:field xpath="MaVDV"/>
+        </xs:key>
+        <xs:key name="keyNoiDungThi">
+            <xs:selector xpath="NoiDungThi"/>
+            <xs:field xpath="MaNoiDung"/>
+        </xs:key>
+        <xs:key name="keyHuyChuong">
+            <xs:selector xpath="HuyChuong"/>
+            <xs:field xpath="MaHuyChuong"/>
+        </xs:key>
+        <xs:keyref name="krefGiaiThuong-VDV" refer="keyVanDongVien">
+            <xs:selector xpath="GiaiThuong"/>
+            <xs:field xpath="MaVDV"/>
+        </xs:keyref>
+        <xs:keyref name="krefGiaiThuong-NDT" refer="keyNoiDungThi">
+            <xs:selector xpath="GiaiThuong"/>
+            <xs:field xpath="MaNoiDung"/>
+        </xs:keyref>
+        <xs:keyref name="newGiaiThuong_HuyCHuong" refer="keyHuyChuong">
+            <xs:selector xpath="GiaiThuong"/>
+            <xs:field xpath="MaHuyChuong"/>
+        </xs:keyref>
+        <xs:keyref name="krefVDV-DT" refer="keyDoiTuyen">
+            <xs:selector xpath="VanDongVien"/>
+            <xs:field xpath="MaDoiTuyen"/>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>
